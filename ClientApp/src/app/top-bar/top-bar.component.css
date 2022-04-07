@@ -1,0 +1,34 @@
+.navbar-color {
+    background-color: rgb(142, 210, 255);
+  }
+  .navbar-brand-logo {
+    height: auto;
+    width: 45px;
+  }
+  
+  @media only screen and (min-width: 992px)  {
+  
+    .btn-separator:after {
+      content: " ";
+      display: block;
+      float: left;
+      background: #ffffff;
+      margin-top: 10px;
+      height: 24px;
+      width: 1px;
+    }
+  }
+  
+  
+  .nav-link-item{
+      color: #ffffff !important;
+  }
+  
+  a.nav-link-item:hover {
+    color: rgb(148, 108, 108) !important;
+  }
+  
+  a.nav-link-profile:hover {
+    font-weight: bold;
+  }
+  

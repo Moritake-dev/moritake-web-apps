@@ -1,0 +1,144 @@
+﻿@model MGAuthentication.Data.ViewModels.UserProfile.ProfileUpdateVM
+@{
+    ViewData["Title"] = "Update Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-7 offset-md-2 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        @*<h5>Update Profile</h5>*@
+                        <h5>プロフィール編集</h5>
+                    </div>
+                    <div class="col-md-6">
+                        @*<a class="btn btn-info edit-btn" asp-action="Profile" asp-controller="User">Back</a>*@
+                        <a class="btn btn-info edit-btn" asp-action="Profile" asp-controller="User">戻る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="User" method="post">
+                    <div class="py-1 col-md-12">
+                        <div class="form-group row">
+                            @*<label asp-for="FirstName" class="col-md-3">First Name</label>*@
+                            <label asp-for="FirstName" class="col-md-3">姓</label>
+                            <div class="col-md-8">
+                                <input asp-for="FirstName" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="LastName" class="col-md-3">Last Name</label>*@
+                            <label asp-for="LastName" class="col-md-3">名</label>
+                            <div class="col-md-8">
+                                <input asp-for="LastName" class="form-control" />
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                                <label asp-for="Gender">Sex</label>
+                                <label asp-for="Gender">性別</label>
+                                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<MGAuthentication.Data.Enums.Gender>()">
+                                    <option selected="selected" value="">Please select</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="BloodType">Blood Group</label>
+                                <label asp-for="BloodType">血液型</label>
+                                <select asp-for="BloodType" class="form-control" asp-items="Html.GetEnumSelectList<MGAuthentication.Data.Enums.BloodType>()">
+                                    <option selected="selected" value="">Please select</option>
+                                </select>
+                            </div>*@
+
+                        <div class="form-group row">
+                            @*<label asp-for="PermanentAddress" class="col-md-3">Address</label>*@
+                            <label asp-for="PermanentAddress" class="col-md-3">住所</label>
+                            <div class="col-md-8">
+
+                                <div class="row">
+                                    <div class="input-group col-md-6">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">〒</span>
+                                        </div>
+                                        <input asp-for="PostNo" class="form-control" aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mt-3">
+                                        <textarea rows="2" cols="55" asp-for="PermanentAddress" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="PhoneNo" class="col-md-3">Phone No</label>*@
+                            <label asp-for="PhoneNo" class="col-md-3">電話番号</label>
+                            <div class="col-md-8">
+                                <input asp-for="PhoneNo" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="EmergencyContactNumber" class="col-md-3">Emergency Contact</label>*@
+                            <label asp-for="EmergencyContactNumber" class="col-md-3">緊急連絡先</label>
+                            <div class="col-md-8">
+                                <input type="tel" asp-for="EmergencyContactNumber" class="form-control" tabindex="1" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="DateOfBirth" class="col-md-3">Date Of Birth</label>*@
+                            <label asp-for="DateOfBirth" class="col-md-3">生年月日</label>
+                            <div class="col-md-8">
+                                <input asp-for="DateOfBirth" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="DepartmentId" class="col-md-3">Department</label>*@
+                            <label asp-for="DepartmentId" class="col-md-3">部署</label>
+                            <div class="col-md-8">
+                                <select class="form-control" asp-for="DepartmentId" asp-items="ViewBag.Departments">
+                                    <option value="">---選択してください---</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @*<label asp-for="JobPositionId" class="col-md-3">Job Position</label>*@
+                            <label asp-for="JobPositionId" class="col-md-3">役職:</label>
+                            <div class="col-md-8">
+                                <select class="form-control" asp-for="JobPositionId" asp-items="ViewBag.JobPositions">
+                                    @*<option value="">Please Select One</option>*@
+                                    <option value="">---選択してください---</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        @*<div class="form-group row">
+                                <label asp-for="JobTitle" class="col-md-3">Job Title</label>
+                                <label asp-for="JobTitle" class="col-md-3">役職</label>
+                                <div class="col-md-8">
+                                    <input asp-for="JobTitle" class="form-control" />
+                                </div>
+                            </div>*@
+
+                        <div class="offset-md-4 col-md-4 mt-5">
+                            <button type="submit" class="btn btn-block btn-sm btn-primary">
+                                @*Update*@
+                                変更する
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

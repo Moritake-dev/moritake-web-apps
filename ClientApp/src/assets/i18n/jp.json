@@ -1,0 +1,143 @@
+{
+    "LANDING_PAGE": {
+        "WELCOME_MESSAGE": "ようこそ　日報アプリへ！！",
+        "WELCOME_INSTRUCTION": "ログインボタンをクリックしてください。",
+        "LOGIN": "ログイン"
+    },
+
+    "DEMO": {
+        "TITLE": "Translation demo",
+        "TEXT": "This is a simple demonstration app for ngx-translate"
+    },
+
+    "TOP_BAR": {
+        "HOME": "Home",
+        "MY_REPORT": "日報履歴",
+        "BROADCAST": "送信履歴",
+        "ADMIN": "ADMIN",
+        "CREATE_REPORT" : "日報を作成",
+        "SHOW_REPORT" : "日報を表示",
+        "LOGOUT": "ログアウト"
+    },
+
+
+
+    "CARD": {
+        "CARD_HEADER_CHANGE_PASWORD": "パスワードを変更する",
+        "CARD_HEADER_COMMENT": "社長指示事項",
+        "CARD_HEADER_LOGIN": "株式会社盛武組",
+        "CARD_HEADER_REPORT_USER": "日報リスト",
+        "CARD_HEADER_USER_NAME": "名前",
+        "CARD_HEADER_CHECK_REPORT_BTN": "提出状況確認",
+        "CARD_HEADER_REPORT_CREATE": "日報を作成",
+        "CARD_HEADER_ADD_REPORT_BTN": "業務を追加",
+        "CARD_HEADER_ADD_MSG_BTN": "メッセージを追加",
+        "CARD_HEADER_REMOVE_REPORT_BTN": "業務を削除",
+        "CARD_HEADER_SEARCH": "日報を検索",
+        "CARD_HEADER_USER_PROFILE": "ユーザープロフィール",
+        "CARD_HEADER_EDIT_PROFILE_BTN": "プロファイルを更新",
+        "CARD_HEADER_REPORT_LIST": "最新の日報",
+        "CARD_HEADER_EDIT_PROFILE": "プロファイルを更新",
+        "CARD_HEADER_USER_REGISTRATION": "ユーザー登録",
+        "CARD_HEADER_USER_LIST": "ユーザーリスト",
+        "CARD_HEADER_REPORT_CHECK": "レポートチェック",
+        "CARD_HEADER_BROADCAST_TITLE": "メッセージ",
+        "CARD_HEADER_BROADCAST_CREATE_TITLE": "メッセージを追加",
+        "CARD_HEADER_MESSAGE_FROM": "送信者",
+        "CARD_HEADER_MESSAGE_DATE": "年月日",
+        "CARD_HEADER_MESSAGE_TITLE": "タイトル",
+        
+
+        "CARD_BODY_EMPLOYEE_NAME": "従業員名",
+        "CARD_BODY_DATE": "年月日",
+        "CARD_BODY_SHOW_BTN": "検索",
+        "CARD_PROMPT_YES": "はい",
+        "CARD_PROMPT_NO": "いいえ"
+    },
+
+    "FORM": {
+        "FORM_INFO_SEARCH": "※) どちらか片方でも検索可",
+        "FORM_DATE": "年月日",
+        "FORM_PLAN": "業務タイトル",
+        "FORM_PROGRESS": "進捗(%)",
+        "FORM_PROGRESS_PLACEHOLDER": "小数点1桁まで",
+        "FORM_DETAIL": "業務内容",
+        "FORM_SUBMIT_BTN": "提出",
+        "FORM_PASSWORD_UPDATE_BTN": "変更",
+        "FORM_SUBMIT_COMMENT_BTN": "送信",
+        "FORM_UPDATE_BTN": "更新",
+        "FORM_BACK_BTN": "戻る",
+        "FORM_SEARCH_EMPLOYEE_NAME": "従業員名",
+        "FORM_SEARCH_SELECT_EMPLOYEE": "--従業員を選択--",
+        "FORM_SEARCH_DATE": "日付",
+        "FORM_SEARCH_BTN": "検索",
+        "FORM_FIRST_NAME": "姓",
+        "FORM_LAST_NAME": "名",
+        "FORM_GENDER": "性別",
+        "FORM_MALE": "男性",
+        "FORM_FEMALE": "女性",
+        "FORM_PHONE": "電話番号",
+        "FORM_JOBTITLE": "役職名",
+        "FORM_ADDRESS": "住所",
+        "FORM_EMAIL": "メール",
+        "FORM_USERNAME": "ユーザー名",
+        "FORM_PASSWORD": "パスワード",
+        "FORM_NEW_PASSWORD": "新しいパスワード(半角6文字)",
+        "FORM_PASSWORD_SIX_CHAR": "パスワード(半角6文字)",
+        "FORM_CONFIRM_PASSWORD": "パスワードを再入力",
+        "FORM_PREVIOUS_PASSWORD": "以前のパスワード",
+        "FORM_COMMENT": "コメント"
+    },
+
+    "FORM_ERROR": {
+        "FORM_ERROR_PLAN_REQUIRED": "業務タイトルを入力してください",
+        "FORM_ERROR_DETAILS_REQUIRED": "業務内容を入力してください",
+        "FORM_ERROR_PROGRESS_REQUIRED": "進捗を入力してください",
+        "FORM_ERROR_BETWEEN_RANGE": "0〜100の数字を入力してください",
+        "FORM_ERROR_BETWEEN_DECIMALS": "半角数字で桁数を合わせてください",
+        "FORM_ERROR_EMAIL_REQUIRED": "メールアドレスを入力してください",
+        "FORM_ERROR_EMAIL_VALID": "正しいメールアドレスを入力してください",
+        "FORM_ERROR_USERNAME_REQUIRED": "ユーザー名を入力してください",
+        "FORM_ERROR_FIRSTNAME_REQUIRED": "姓を入力してください",
+        "FORM_ERROR_LASTNAME_REQUIRED": "名を入力してください",
+        "FORM_ERROR_PASSWORD_REQUIRED": "パスワードを入力してください",
+        "FORM_ERROR_PREVIOUS_PASSWORD_REQUIRED": "以前のパスワードを入力してください",
+        "FORM_ERROR_NEW_PASSWORD_REQUIRED": "新しいパスワードを入力してください",
+        "FORM_ERROR_PASSWORD_CHAR": "6 文字でパスワードを入力してください",
+        "FORM_ERROR_CONFIRM_PASSWORD_REQUIRED": "パスワードを再入力してください",
+        "FORM_ERROR_PASSWORD_MATCH": "パスワードが一致していません",
+        "FORM_ERROR_PASSWORD_ATLEAST": "大小のアルファベットを一つ入れてください",
+        "FORM_ERROR_INCORRECT_USER_PASS": "ユーザー名かパスワードが間違っています",
+        "FORM_ERROR_INCORRECT_PREV_PASS": "以前のパスワードが間違っています",
+        "FORM_ERROR_MESSAGE_TITLE_REQUIRED": "メッセージのタイトルを入力してください",
+        "FORM_ERROR_MESSAGE_BODY_REQUIRED": "メッセージを入力してください"
+    },
+
+    "TABLE": {
+        "TABLE_DATE":"年月日",
+        "TABLE_PLAN":"業務タイトル",
+        "TABLE_DETAIL":"業務内容",
+        "TABLE_PROGRESS":"進捗(%)",
+        "TABLE_COMMENT":"社長指示事項",
+        "TABLE_ACTION": "コメント作成",
+        "TABLE_FIRST_NAME": "姓",
+        "TABLE_LAST_NAME": "名",
+        "TABLE_PHONE": "電話番号",
+        "TABLE_NAME": "名前",
+        "TABLE_JOBTITLE": "役職名",
+        "TABLE_ADDRESS": "住所",
+        "TABLE_GENDER": "性別",
+        "TABLE_CHANGE_PASSWORD": "パスワードを変更する",
+        "MODAL_TITLE": "提出しますか？",
+        "TABLE_EMPLOYEES": "従業員",
+        "TABLE_DAYS": "日々",
+        "TABLE_ME": "日々"
+    },
+
+    "UTILS" : {
+        "PAGINATION_NEXT": "次へ",
+        "PAGINATION_PREVIOUS": "前",
+        "PRELOADER_TEXT": "お待ちください"
+    }
+
+}

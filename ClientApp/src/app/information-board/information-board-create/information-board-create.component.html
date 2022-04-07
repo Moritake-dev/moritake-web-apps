@@ -1,0 +1,104 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <div class="col-md-10 offset-md-1 mt-5">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Add Message</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <form [formGroup]="messageCreateForm" (ngSubmit)="onSubmit(template)">
+          <div class="py-1 col-md-12">
+            <div class="form-group row">
+              <label for="messageTitle" class="col-md-3">Message Title</label>
+              <div class="col-md-8">
+                <input 
+                  formControlName="messageTitle"
+                  placeholder="Message Title"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && messageCreateFormControl.messageTitle.errors }"
+                />
+                <div *ngIf="submitted && messageCreateFormControl.messageTitle.errors" class="invalid-feedback">    
+                  <div *ngIf="messageCreateFormControl.messageTitle.errors.required">Please add a title</div>    
+                </div> 
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="address" class="col-md-3">Details</label>
+              <div class="col-md-8">
+                <!-- <textarea
+                  rows="7"
+                  cols="55"
+                  formControlName="messageDetail"
+                  class="form-control"
+                  placeholder="Details"
+                  [ngClass]="{ 'is-invalid': submitted && messageCreateFormControl.messageDetail.errors }"
+                ></textarea> -->
+                <ckeditor tagName="textarea" formControlName="messageDetail" rows="7" cols="55" [editor]="Editor"
+                [ngClass]="{ 'is-invalid': submitted && messageCreateFormControl.messageDetail.errors }"
+                ></ckeditor>
+                <div *ngIf="submitted && messageCreateFormControl.messageDetail.errors" class="invalid-feedback">    
+                  <div *ngIf="messageCreateFormControl.messageDetail.errors.required">Please add details</div>    
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <button class="btn btn-info float-right">Submit</button>
+              <button type="button" [routerLink]="['/home']" class="btn btn-info float-right mr-2">Back</button>
+            </div>
+          </div>
+        </form>
+
+        <ng-template #template>
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">Do you want to submit?</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalDecline()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body overflow-auto">
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table table-responsive-sm table-bordered">
+                      <thead align="center" class="text-nowrap">
+                        <tr>
+                          <th>Title</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td align="center">{{messageFormData.messageTitle}}</td>
+                          <td [innerHTML]="messageFormData.messageDetail | safeHtml"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-12">
+                <button class="btn btn-success col-md-1 btn-sm ml-2 float-right" (click)="modalConfirm()">Yes</button>
+                <button class="btn btn-danger col-md-1 btn-sm float-right" (click)="modalDecline()">No</button>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,138 @@
+{
+    "LANDING_PAGE": {
+        "WELCOME_MESSAGE": "Welcome to Moritake Gumi",
+        "WELCOME_INSTRUCTION": "Please select login or registration.",
+        "LOGIN": "Login"
+    },
+
+    "DEMO": {
+        "TITLE": "Translation demo",
+        "TEXT": "This is a simple demonstration app for ngx-translate"
+    },
+    "TOP_BAR": {
+        "HOME": "Home",
+        "MY_REPORT": "MY REPORT",
+        "BROADCAST": "My Message",
+        "ADMIN": "ADMIN",
+        "CREATE_REPORT" : "Create Report",
+        "SHOW_REPORT" : "Show Report",
+        "LOGOUT": "Logout"
+    },
+
+    "CARD": {
+        "CARD_HEADER_CHANGE_PASWORD": "Change password",
+        "CARD_HEADER_COMMENT": "Comment",
+        "CARD_HEADER_LOGIN": "Moritake-gumi",
+        "CARD_HEADER_REPORT_USER": "Report List",
+        "CARD_HEADER_USER_NAME": "Name",
+        "CARD_HEADER_CHECK_REPORT_BTN": "Check Report",
+        "CARD_HEADER_REPORT_CREATE": "Create Report",
+        "CARD_HEADER_ADD_REPORT_BTN": "Add Report",
+        "CARD_HEADER_ADD_MSG_BTN": "Add Message",
+        "CARD_HEADER_REMOVE_REPORT_BTN": "Remove Report",
+        "CARD_HEADER_SEARCH": "Search Report",
+        "CARD_HEADER_USER_PROFILE": "User Profile",
+        "CARD_HEADER_EDIT_PROFILE_BTN": "Edit Profile",
+        "CARD_HEADER_REPORT_LIST": "Latest Reports",
+        "CARD_HEADER_EDIT_PROFILE": "Update Profile",
+        "CARD_HEADER_USER_REGISTRATION": "User Registration",
+        "CARD_HEADER_USER_LIST": "List of Users",
+        "CARD_HEADER_REPORT_CHECK": "Report Check",
+        "CARD_HEADER_BROADCAST_TITLE": "Messages",
+        "CARD_HEADER_BROADCAST_CREATE_TITLE": "Create Message",
+        "CARD_HEADER_MESSAGE_FROM": "From",
+        "CARD_HEADER_MESSAGE_DATE": "Date",
+        "CARD_HEADER_MESSAGE_TITLE": "Title",
+
+        "CARD_BODY_EMPLOYEE_NAME": "Employee Name",
+        "CARD_BODY_DATE": "Date",
+        "CARD_BODY_SHOW_BTN": "Show",
+        "CARD_PROMPT_YES": "Yes",
+        "CARD_PROMPT_NO": "No"
+    },
+
+    "FORM": {
+        "FORM_INFO_SEARCH": "**You can search either by employee or by date",
+        "FORM_DATE": "Date",
+        "FORM_PLAN": "Plan",
+        "FORM_PROGRESS": "Progress",
+        "FORM_PROGRESS_PLACEHOLDER": "Progress Percent",
+        "FORM_DETAIL": "Details",
+        "FORM_SUBMIT_BTN": "Submit",
+        "FORM_PASSWORD_UPDATE_BTN": "Update",
+        "FORM_SUBMIT_COMMENT_BTN": "Submit",
+        "FORM_UPDATE_BTN": "Update",
+        "FORM_BACK_BTN": "Back",
+        "FORM_SEARCH_EMPLOYEE_NAME": "Employee Name",
+        "FORM_SEARCH_SELECT_EMPLOYEE": "--Select Employee--",
+        "FORM_SEARCH_DATE": "Date Search",
+        "FORM_SEARCH_BTN": "Search",
+        "FORM_FIRST_NAME": "First Name",
+        "FORM_LAST_NAME": "Last Name",
+        "FORM_GENDER": "Gender",
+        "FORM_MALE": "Male",
+        "FORM_FEMALE": "Female",
+        "FORM_PHONE": "Phone",
+        "FORM_JOBTITLE": "Job Title",
+        "FORM_ADDRESS": "Address",
+        "FORM_EMAIL": "Email Id",
+        "FORM_USERNAME": "Username",
+        "FORM_PASSWORD": "Password",
+        "FORM_NEW_PASSWORD": "New Password",
+        "FORM_PASSWORD_SIX_CHAR": "Atleast 6 Characters",
+        "FORM_CONFIRM_PASSWORD": "Confirm Password",
+        "FORM_PREVIOUS_PASSWORD": "Previous Password",
+        "FORM_COMMENT": "Comments"
+    },
+
+    "FORM_ERROR": {
+        "FORM_ERROR_PLAN_REQUIRED": "Plan is required",
+        "FORM_ERROR_DETAILS_REQUIRED": "Details is required",
+        "FORM_ERROR_PROGRESS_REQUIRED": "Progress is required",
+        "FORM_ERROR_BETWEEN_RANGE": "Please enter number between 0-100",
+        "FORM_ERROR_BETWEEN_DECIMALS": "Please insert 1 digit after decimal",
+        "FORM_ERROR_EMAIL_REQUIRED": "Email Id is required",
+        "FORM_ERROR_EMAIL_VALID": "Email must be a valid email address",
+        "FORM_ERROR_USERNAME_REQUIRED": "Username is required",
+        "FORM_ERROR_FIRSTNAME_REQUIRED": "First Name is required",
+        "FORM_ERROR_LASTNAME_REQUIRED": "Last Name is required",
+        "FORM_ERROR_PREVIOUS_PASSWORD_REQUIRED": "Previous password is required",
+        "FORM_ERROR_NEW_PASSWORD_REQUIRED": "New password is required",
+        "FORM_ERROR_PASSWORD_REQUIRED": "Password is required",
+        "FORM_ERROR_PASSWORD_CHAR": "Password must be at least 6 characters",
+        "FORM_ERROR_PASSWORD_ATLEAST": "Password must be at least 1 uppercase letter, 1 lowercase letter and 1 digit",
+        "FORM_ERROR_CONFIRM_PASSWORD_REQUIRED": "Confirm Password is required",
+        "FORM_ERROR_PASSWORD_MATCH": "Passwords must match",
+        "FORM_ERROR_INCORRECT_USER_PASS": "Username or Password is incorrect",
+        "FORM_ERROR_INCORRECT_PREV_PASS": "Previous Password is incorrect",
+        "FORM_ERROR_MESSAGE_TITLE_REQUIRED": "Message Title required",
+        "FORM_ERROR_MESSAGE_BODY_REQUIRED": "Message Body required"
+    },
+
+    "TABLE": {
+        "TABLE_DATE": "Date",
+        "TABLE_PLAN": "Plan",
+        "TABLE_DETAIL": "Detail",
+        "TABLE_PROGRESS": "Progress",
+        "TABLE_COMMENT": "Comment",
+        "TABLE_ACTION": "Action",
+        "TABLE_FIRST_NAME": "First Name",
+        "TABLE_LAST_NAME": "Last Name",
+        "TABLE_PHONE": "Phone",
+        "TABLE_NAME": "Name",
+        "TABLE_JOBTITLE": "Job Title",
+        "TABLE_ADDRESS": "Address",
+        "TABLE_GENDER": "Gender",
+        "TABLE_CHANGE_PASSWORD": "Change Password",
+        "MODAL_TITLE": "Do you want to submit the report?",
+        "TABLE_EMPLOYEES": "Employees",
+        "TABLE_DAYS": "Days"
+    },
+
+    "UTILS" : {
+        "PAGINATION_NEXT": "Next",
+        "PAGINATION_PREVIOUS": "Previous",
+        "PRELOADER_TEXT": "Please Wait"
+    }
+
+}

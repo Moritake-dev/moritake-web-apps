@@ -1,0 +1,89 @@
+﻿@model MGAuthentication.Data.ViewModels.UserProfile.ProfileReadVM
+<div class="container">
+    <div class="col-md-7 offset-md-2 mt-5">
+        <div class="card">
+
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        @*<h5>User Profile</h5>*@
+                        <h5>プロフィール</h5>
+                    </div>
+                    <div class="col-md-6">
+                        @*<a class="btn btn-info edit-btn" asp-action="Edit" asp-controller="User">Edit Profile</a>*@
+                        <a class="btn btn-info edit-btn" asp-action="Edit" asp-controller="User">編集</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-borderless table-responsive">
+
+                    <tbody>
+                        <tr>
+                            @*<td class="compact-row"><b>Name: </b></td>*@
+                            <td class="compact-row"><b>氏名: </b></td>
+                            <td>@Model.FullName</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Gender: </b></td>*@
+                            <td class="compact-row"><b>性別: </b></td>
+                            <td>@Model.Gender</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Blood Type: </b></td>*@
+                            <td class="compact-row"><b>血液型: </b></td>
+                            <td>@Model.BloodType</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Address: </b></td>*@
+                            <td class="compact-row"><b>住所: </b></td>
+                            <td>〒 @Model.PostNo @Model.PermanentAddress</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Phone No.: </b></td>*@
+                            <td class="compact-row"><b>電話番号: </b></td>
+                            <td>@Model.PhoneNo</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Emergency Contact No.: </b></td>*@
+                            <td class="compact-row"><b>緊急連絡先: </b></td>
+                            <td>@Model.EmergencyContactNumber</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Date of Birth: </b></td>*@
+                            <td class="compact-row"><b>生年月日: </b></td>
+                            <td>@Model.DateOfBirth</td>
+                        </tr>
+                        <tr>
+                            @*<td class="compact-row"><b>Department: </b></td>*@
+                            <td class="compact-row"><b>部署: </b></td>
+                            <td>@Model.DepartmentName</td>
+                        </tr>
+                        @*<tr>
+                                <td class="compact-row"><b>Job Position: </b></td>
+                                <td>@Model.JobPositionName</td>
+                            </tr>*@
+                        <tr>
+                            @*<td class="compact-row"><b>Job Title: </b></td>*@
+                            <td class="compact-row"><b>役職: </b></td>
+                            <td>@Model.JobPositionName</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            @*<td><a asp-action="ChangePassword" asp-controller="Auth">Change Password</a></td>*@
+                            <td><a asp-action="ChangePassword" asp-controller="Auth">パスワードの変更</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        @*<a asp-action="Index" asp-controller="Home" class="btn btn-outline-info float-right mt-2">Back</a>*@
+                        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-info float-right mt-2">戻る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

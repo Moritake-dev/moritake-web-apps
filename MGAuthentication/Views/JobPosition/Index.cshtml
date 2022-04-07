@@ -1,0 +1,63 @@
+﻿@model IList<MGAuthentication.Data.ViewModels.Common.JobPosition.JobPositionReadVM>
+
+@{
+    ViewData["Title"] = "Job Positions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Microsoft.AspNetCore.Identity
+@using MGAuthentication.Data.User;
+@inject SignInManager<ApplicationUser> _signInManager
+@inject UserManager<ApplicationUser> _userManager
+
+<div class="container">
+    <div class="col-md-12 my-2">
+        <h4>Job Positions</h4>
+    </div>
+    <div class="col-md-12">
+        <div class="my-3">
+            <a class="btn btn-outline-info" asp-action="Create">Create New Job Positions</a>
+            <a class="btn btn-outline-info" asp-action="DeletedData">Restore Deleted Job Positions</a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Job Position Name</th>
+                    <th>Created By</th>
+                    <th>Created Date</th>
+                    <th>Updated By</th>
+                    <th>Updated Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        @if (item.CreatedBy != null)
+                        {
+                            var userName = _userManager.FindByIdAsync(item.CreatedBy).GetAwaiter().GetResult();
+                            <td>@userName</td>
+                        }
+                        else
+                        {
+                            <td>@item.CreatedBy</td>
+                        }
+                        <td>@item.CreatedDate</td>
+                        <td>@item.UpdatedBy</td>
+                        <td>@item.UpdatedDate</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-jobPositionId="@item.Id">Edit |</a>
+                            <a asp-action="Delete" asp-route-jobPositionId="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="my-3">
+            <a class="btn btn-outline-success" asp-action="AdminPanel" asp-controller="Home">Back to Admin Panel</a>
+        </div>
+    </div>
+</div>

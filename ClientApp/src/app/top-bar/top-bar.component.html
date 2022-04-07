@@ -1,0 +1,133 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-color">
+    <a class="navbar-brand" [routerLink]="'/home'">
+      <img
+        class="navbar-brand-logo"
+        src="../../../assets/images/logo.png"
+        alt="Company Logo"
+      />
+      <b> 株式会社盛武組</b>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="http://example.com"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+          </div>
+        </li> -->
+  
+        <!-- top bar links will be visible based on app. here ng-container is used for separation. -->
+  
+        <li class="nav-item">
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn btn-success dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              Apps
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/broadcast"
+                >Report Management App</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]=""
+                >Attendance App</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" ref="http://153.126.193.223:5000/"
+                >Location App</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/document-app"
+                >Document App</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]=""
+                >Construction App</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-item"
+            
+            [routerLink]="'/home'"
+            >Home<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <span
+          class="btn-separator"
+        ></span>
+        <ng-container >
+          <!-- <li class="nav-item">
+            <a
+              class="nav-link nav-link-item"
+              [routerLink]="'/admin'"
+              >Admin<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <span
+            class="btn-separator"
+          ></span> -->
+  
+          <!-- <li class="nav-item">
+            <a
+              class="nav-link nav-link-item"
+              *ngIf="!commonService.roleMatch(['Shacho'])"
+              [routerLink]="'/information-board'"
+              >Information Board<span class="sr-only">(current)</span></a
+            >
+          </li> -->
+          <span
+            class="btn-separator"
+          ></span>
+  
+        </ng-container>
+  
+  
+        <li class="nav-item">
+          <a class="nav-link nav-link-profile" [routerLink]="'/user'">
+            Imran </a
+          >
+        </li>
+  
+        
+  
+        <!-- <li class="nav-item">
+          <a class="btn btn-success" href="http://153.126.193.223:5000/">DOKO</a>
+        </li>  -->
+  
+        <li class="nav-item">
+          <a (click)="logout()" class="btn btn-outline-info"
+            ><span class="glyphicon glyphicon-home"></span> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

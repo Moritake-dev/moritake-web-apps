@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-12 my-3">
+        <h4>Management</h4>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="offset-md-1 col-md-8 table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Authentication</th>
+                            <td><a asp-action="Register" asp-controller="Auth">User Registration</a></td>
+                            <td><a asp-action="PasswordReset" asp-controller="Auth">Password Reset</a></td>
+                        </tr>
+                        <tr>
+                            <th>Roles</th>
+                            <td><a asp-action="Index" asp-controller="Role">List</a></td>
+                            <td><a asp-action="Create" asp-controller="Role">Create</a></td>
+                            <td><a asp-action="AssignRoleToUser" asp-controller="Role">Assign Role to User</a></td>
+                        </tr>
+                        <tr>
+                            <th>Claims</th>
+                            <td><a asp-action="AssignClaimToUser" asp-controller="Role">Assign Claims to User</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 my-3">
+        <h4>Application Setup</h4>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="offset-md-1 col-md-6 table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Department</th>
+                            <td><a asp-action="Index" asp-controller="Department">List</a></td>
+                            <td><a asp-action="Create" asp-controller="Department">Create</a></td>
+                            <td><a asp-action="DeletedData" asp-controller="Department">Deleted Data</a></td>
+                        </tr>
+                        <tr>
+                            <th>Job Position</th>
+                            <td><a asp-action="Index" asp-controller="JobPosition">List</a></td>
+                            <td><a asp-action="Create" asp-controller="JobPosition">Create</a></td>
+                            <td><a asp-action="DeletedData" asp-controller="JobPosition">Deleted Data</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

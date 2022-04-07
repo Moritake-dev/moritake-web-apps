@@ -1,0 +1,85 @@
+﻿@model List<MGAuthentication.Data.RepositoryModels.LocationReadRM>
+@{
+    ViewData["Title"] = "Location Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 align-content-center">
+            @*<h4>Current Location Of the Employees</h4>*@
+            <h4>行き先行動表</h4>
+        </div>
+        <div class="col-md-6">
+            @*<a asp-action="Edit" asp-controller="Location" class="btn btn-info float-right">Edit Current Location</a>*@
+            @*<a asp-action="LocationHistory" asp-controller="Location" class="btn btn-info my-2">Location History</a>*@
+            <a asp-action="LocationUpdate" asp-controller="Location" asp-route-userId="@User.FindFirst("sub").Value" class="btn btn-info float-right">新規予定</a>
+            <a asp-action="MonthlyLocationHistory" asp-controller="Location" asp-route-userId="@User.FindFirst("sub").Value" class="btn btn-outline-success float-right mx-2">行動履歴及び編集</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        @*<th>User Id</th>*@
+                        @* <th>Name</th>*@
+                        <th>氏名</th>
+                        @*<th>Job Title</th>*@
+                        <th>役職</th>
+                        @*<th>Current Location</th>*@
+                        <th>行き先</th>
+                        <th>予定</th>
+                        @*@if(User.FindFirst(x => x.Type == "Permission" && x.Value == "can.update")?.Value == "can.update")
+                            {
+                            <th>Action</th>
+                            }*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        @*<td>@item.UserId</td>*@
+                        <td>@item.FullName</td>
+                        <td>@item.JobPositionName</td>
+                        @if (item.CurrentLocations.Count > 0)
+                            {
+                        <td>@item.CurrentLocations.FirstOrDefault().LocationName</td>
+                            }
+                            else
+                            {
+                        <td></td>
+                            }
+                        @if (item.CurrentLocations.Count > 0)
+                            {
+                        <td>@item.CurrentLocations.FirstOrDefault().LocationPlan</td>
+                            }
+                            else
+                            {
+                        <td></td>
+                            }
+                        @if (User.FindFirst(x => x.Type == "Permission" && x.Value == "can.update")?.Value == "can.update")
+                            {
+                        @*<td><a asp-action="Edit" asp-route-userId="@item.UserId">Edit</a></td>*@
+                        @if(item.CurrentLocations.Count>0)
+                                {
+                        <td><a asp-action="Edit" asp-route-locationId="@item.CurrentLocations.FirstOrDefault().Id">編集</a></td>
+                                }
+                                else
+                                {
+                        <td></td>
+                                }
+                        <td><a asp-action="LocationUpdate" asp-route-userId="@item.UserId">新規予定</a></td>
+                            }
+                        @*@if (item.CurrentLocations.Count > 0 && User.FindFirst(x => x.Type == "location_approval" && x.Value == "can.approve")?.Value == "can.approve")
+                            {
+                                <td><a asp-action="Edit" asp-route-locationId="@item.CurrentLocations.FirstOrDefault().Id">Approve</a></td>
+                            }*@
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

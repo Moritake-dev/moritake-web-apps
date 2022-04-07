@@ -1,0 +1,47 @@
+﻿@model MGAuthentication.Data.ViewModels.Role.AssignClaimToUserVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row mt-3">
+        <h1>Assign Claims to User</h1>
+    </div>
+    <div class="row">
+        @*TODO : CLAIM TYPES SHOULD BE A CUSTOM CLAIM CLASS*@
+        <h5>Hardcoded claim type >>feature_access<< claim value >>location<< </h5>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="mt-3" asp-action="AssignClaimToUser" asp-controller="Role" method="post">
+                <div class="row">
+                    <label class="col-md-3" asp-for="UserId">Select User</label>
+                    <select class="col-md-4" asp-for="UserId" asp-items="ViewBag.Employees">
+                        <options value="">Please select one</options>
+                    </select>
+                </div>
+
+                @*<div>
+                        <label asp-for="UserId">User Id</label>
+                        <input asp-for="UserId" />
+                    </div>*@
+                <div class="row my-2">
+                    <label class="col-md-3" asp-for="ClaimType">Claim Type</label>
+                    <input class="col-md-4" asp-for="ClaimType" />
+                </div>
+                <div class="row my-2">
+                    <label class="col-md-3" asp-for="ClaimValue">Claim Value</label>
+                    <input class="col-md-4" asp-for="ClaimValue" />
+                </div>
+                <div class="row my-3">
+                    <button class="offset-md-3 btn btn-info" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-12">
+            <a class="btn btn-outline-success" asp-action="AdminPanel" asp-controller="Home">Back to Admin Panel</a>
+        </div>
+    </div>
+</div>

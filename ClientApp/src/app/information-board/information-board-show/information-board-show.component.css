@@ -1,0 +1,15 @@
+.messageFont{
+    color: cornflowerblue;
+    font-size: 14px;
+}
+.content-body {
+    padding: 40px 15px;
+    text-align: center;
+  }
+  .content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .content-button .btn {
+    margin-right: 10px;
+  }

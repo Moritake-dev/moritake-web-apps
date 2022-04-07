@@ -1,0 +1,12 @@
+TODO file for Angular:
+
+    * Logout
+    * Refactor
+    * Route Refactor
+    * Translator not working
+
+
+Done:
+    * information board
+        * Save
+        * Show

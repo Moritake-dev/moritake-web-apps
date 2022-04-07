@@ -1,0 +1,21 @@
+﻿@model MGAuthentication.Data.ViewModels.Role.CreateRoleVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-12 my-3">
+        <h4>Create new Role</h4>
+    </div>
+    <div class="col-md-6 my-3">
+        <form asp-action="Create" asp-controller="Role" method="post">
+            <label asp-for="Name">Role Name</label>
+            <input asp-for="Name" class="form-control" />
+            <button class="my-2 btn btn-info" type="submit" value="Save">Save</button>
+        </form>
+    </div>
+    <div class="col-md-12">
+        <a class="btn btn-outline-success" asp-action="AdminPanel" asp-controller="Home">Back to Admin Panel</a>
+    </div>
+</div>

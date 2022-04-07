@@ -1,0 +1,142 @@
+<app-top-bar></app-top-bar>
+
+<!-- Main body area -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="content-body">
+        <h1>Welcome to Moritake Gumi</h1>
+        <div class="content">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <div class="content-button"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-3">
+  <div class="col-md-12">
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Information Board</h5>
+              </div>
+              <div
+                class="col-md-8 d-flex flex-row justify-content-end"
+                
+              >
+                <!-- <a [routerLink]="'/checkreport'" class="col-md-3">Check Report</a> -->
+
+                <div class="col-md-12">
+                  <button
+                    type="button"
+                    class="btn btn-info float-right"
+                    [routerLink]="['/create/']"
+                  >
+                  {{'CARD.CARD_HEADER_ADD_MSG_BTN' | translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="col-md-12">
+          <div
+            *ngFor="
+              let item of userList
+                | paginate
+                  : {
+                      id: 'reportPage',
+                      itemsPerPage: 5,
+                      currentPage: pageNumber
+                    };
+              let i = index
+            "
+            class="card mb-3"
+          >
+            <div class="card-header messageFont">
+              <div class="row">
+                <div class="col-md-4">
+
+                  <div>
+                    <i>Name: {{ item.userInfo.fullName}} </i>
+                  </div>
+
+                  <div>
+                    Date : {{ item.createdDate | date: "yyyy/MM/dd h:mm:ss a"}}
+                  </div>
+
+                  <div>
+                    Title :
+                    <b>{{ item.messageTitle}}</b>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-8 d-flex flex-row justify-content-end"
+                >
+                  <!-- <a [routerLink]="'/checkreport'" class="col-md-3">Check Report</a> -->
+
+                  <div class="col-md-12">
+                    <button
+                      type="button"
+                      class="btn btn-info float-right"
+                      [routerLink]="['/edit/', item.id]"
+                    >Edit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="font-self-14">
+                <div class="m-2">
+                  <div [innerHTML]="item.messageDetail | safeHtml"></div>
+                  <!-- <nga-read-more
+                    [text]="item.messageBody"
+                    [textLength]="180"
+                  ></nga-read-more> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 d-flex justify-content-center">
+        <pagination-controls
+          id="reportPage"
+          previousLabel="Previous"
+          nextLabel="Next"
+          directionLinks="true"
+          screenReaderPageLabel="page"
+          screenReaderCurrentLabel="You're on page"
+          (pageChange)="pageNumber = $event"
+        ></pagination-controls>
+      </div>
+      <ngx-spinner
+        bdColor="rgba(51, 51, 51, 0.8)"
+        size="default"
+        type="ball-spin-clockwise"
+      >
+        <p style="color: white">Please Wait</p>
+      </ngx-spinner>
+    </div>
+  </div>
+</div>

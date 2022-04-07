@@ -1,0 +1,28 @@
+﻿@model MGAuthentication.Data.ViewModels.Common.Department.DepartmentCreateVM
+@{
+    ViewData["Title"] = "Create Department";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-12 my-3">
+        <h4>Create Department</h4>
+    </div>
+
+    <div class="col-md-6 my-3">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-12 my-3">
+        <a class="row my-2" asp-action="Index">Back to List</a>
+        <a class="row btn btn-outline-success" asp-action="AdminPanel" asp-controller="Home">Back to Admin Panel</a>
+    </div>
+</div>

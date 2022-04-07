@@ -1,0 +1,64 @@
+﻿@model MGAuthentication.Data.ViewModels.Location.LocationEditVM
+
+@{
+    ViewData["Title"] = "Edit Current Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-7 offset-md-2 mt-5">
+        <div class="card">
+
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>予定を編集</h5>
+                        @*<h5>行き先の編集</h5>*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="Location" method="post">
+                    <input type="hidden" asp-for="Id" class="form-control" />
+                    <div class="form-group">
+                        <label asp-for="EffectiveDate">日付</label>
+                        <input asp-for="EffectiveDate" id="datepicker" type="text" class="form-control" disabled value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")" />
+                        <span asp-validation-for="EffectiveDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        @*<label asp-for="CurrentLocation">Name</label>*@
+                        <label asp-for="CurrentLocationName">行き先を編集してください</label>
+                        <input type="text" asp-for="CurrentLocationName" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @*<label asp-for="CurrentLocation">Plan</label>*@
+                        <label asp-for="CurrentLocationPlan">予定を編集してください</label>
+                        <input type="text" asp-for="CurrentLocationPlan" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @*<input type="submit" value="Update" class="btn btn-primary" />*@
+                        <input type="submit" value="上書き" class="btn btn-primary" />
+                    </div>
+                </form>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        @*<a asp-action="Index" asp-controller="Location" class="btn btn-outline-info float-right mt-2">Back</a>*@
+                        <a asp-action="Index" asp-controller="Location" class="btn btn-outline-info float-right mt-2">戻る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+}

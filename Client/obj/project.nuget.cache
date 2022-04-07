@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+AAhTxM5c3OeXiCus9WcFwck1FlfTja1o2a4SHRm//CY/gLpE2UPm8fZdNgneyHjxiwlHKTXx2yGMGamggRiYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\IMURANUL\\Desktop\\MGAuthentication\\Client\\Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IMURANUL\\.nuget\\packages\\identitymodel\\4.3.1\\identitymodel.4.3.1.nupkg.sha512",
+    "C:\\Users\\IMURANUL\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\IMURANUL\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

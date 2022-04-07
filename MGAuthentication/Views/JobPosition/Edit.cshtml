@@ -1,0 +1,26 @@
+﻿@model MGAuthentication.Data.ViewModels.Common.JobPosition.JobPositionUpdateVM
+@{
+    ViewData["Title"] = "Edit Job Position";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Edit</h1>
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" class="form-control" />
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <div>
+            <a asp-action="Index" class="btn btn-outline-info">Back</a>
+        </div>
+    </div>
+</div>
